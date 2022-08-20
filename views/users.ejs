@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('script.ejs')%>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Created At</th>
+    
+                    </tr>
+                    <% for( let i=0; i < users.length; i++){ 
+                        const user = users[i]
+                        %>
+                        <tr>
+                            <td><%= user.id %></td>
+                            <td><%= user.name %></td>
+                            <td><%= user.createdAt %></td>
+                        </tr>
+                    <% } %>
+                    
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
